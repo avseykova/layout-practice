@@ -17,3 +17,6 @@ yarn-error.log*
 *.js.map
 .env
 .env.local
+fonts/
+icons/
+images/
