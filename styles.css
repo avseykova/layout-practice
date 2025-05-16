@@ -218,6 +218,7 @@ svg * {
   --color-light: #ffffff;
   --color-dark-gray: #404040;
   --color-light-gray: #c4c4c4;
+  --color-dark-alternate: #131619;
 
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
@@ -282,6 +283,20 @@ a:hover {
   padding-inline: var(--container-padding-x);
 }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+
 h1,
 h2,
 h3,
@@ -297,6 +312,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-dark-alternate);
   column-gap: 20px;
   padding-inline: 32px;
 }
@@ -322,7 +338,7 @@ h6 {
 .header-menu-link.is-current::after {
   content: "";
   width: 5px;
-  height: 5px;
+  aspect-ratio: 1;
   background-color: currentColor;
   border-radius: 50%;
   column-gap: 7px;
@@ -339,12 +355,12 @@ h6 {
   justify-content: center;
   row-gap: 4px;
   width: 40px;
-  height: 40px;
+  aspect-ratio: 1;
   color: var(--color-light);
   background-color: transparent;
   color: var(--color-light);
   border: var(--border);
-  border-radius: var(--border-radius);
+  border-radius: 50%;
 }
 
 .header-burger-button:hover {
